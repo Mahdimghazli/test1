@@ -1,0 +1,31 @@
+<!-- ... (autres parties du fichier POM) ... -->
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+        <!-- Ajoutez le plugin Sonar pour Maven -->
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version> <!-- Utilisez la version appropriée -->
+        </plugin>
+    </plugins>
+    <extensions>
+        <extension>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version> <!-- Utilisez la version appropriée -->
+        </extension>
+    </extensions>
+</build>
+
+        <!-- Ajoutez la configuration SonarCloud -->
+<properties>
+<sonar.organization>VotreOrganisationSonarCloud</sonar.organization>
+<sonar.projectKey>VotreCleDeProjetSonarCloud</sonar.projectKey>
+<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+<sonar.login>VotreJetonD'AccesSonarCloud</sonar.login>
+</properties>
